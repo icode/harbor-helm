@@ -37,7 +37,7 @@ imagePullPolicy: IfNotPresent
 portal:
   image:
     repository: goharbor/harbor-portal
-    tag: dev
+    tag: v1.6.0
   replicas: 1
 # resources:
 #  requests:
@@ -50,7 +50,7 @@ portal:
 adminserver:
   image:
     repository: goharbor/harbor-adminserver
-    tag: dev
+    tag: v1.6.0
   replicas: 1
   # resources:
   #  requests:
@@ -63,7 +63,7 @@ adminserver:
 jobservice:
   image:
     repository: goharbor/harbor-jobservice
-    tag: dev
+    tag: v1.6.0
   replicas: 1
   maxWorkers: 50
   volumes:
@@ -83,7 +83,7 @@ jobservice:
 core:
   image:
     repository: goharbor/harbor-core
-    tag: dev
+    tag: v1.6.0
   replicas: 1
 # resources:
 #  requests:
@@ -100,7 +100,7 @@ database:
   internal:
     image:
       repository: goharbor/harbor-db
-      tag: dev
+      tag: v1.6.0
     # the superuser password of database
     password: "changeit"
     volumes:
@@ -131,7 +131,7 @@ registry:
   registry:
     image:
       repository: goharbor/registry-photon
-      tag: dev
+      tag: v0.5.1-v1.6.0
     logLevel: info
   controller:
     image:
@@ -157,7 +157,7 @@ chartmuseum:
   enabled: true
   image:
     repository: goharbor/chartmuseum-photon
-    tag: dev
+    tag: v0.7.1-v1.6.0
   replicas: 1
   volumes:
     data:
@@ -243,7 +243,7 @@ clair:
   enabled: true
   image:
     repository: goharbor/clair-photon
-    tag: dev
+    tag: v2.0.5-v1.6.0
   replicas: 1
   # The interval of clair updaters, the unit is hour, 
   # set to 0 to disable the updaters
@@ -263,7 +263,7 @@ redis:
   internal:
     image:
       repository: goharbor/redis-photon
-      tag: dev
+      tag: v1.6.0
     volumes:
       data:
         # existingClaim: ""
@@ -293,12 +293,12 @@ notary:
   server:
     image:
       repository: goharbor/notary-server-photon
-      tag: dev
+      tag: v0.5.1-v1.6.0
     replicas: 1
   signer:
     image:
       repository: goharbor/notary-signer-photon
-      tag: dev
+      tag: v0.5.1-v1.6.0
     replicas: 1
   nodeSelector: {}
   tolerations: []
