@@ -83,7 +83,7 @@ jobservice:
 core:
   image:
     repository: goharbor/harbor-core
-    tag: v1.6.0
+    tag: dev
   replicas: 1
 # resources:
 #  requests:
