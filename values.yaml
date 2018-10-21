@@ -37,7 +37,7 @@ imagePullPolicy: IfNotPresent
 portal:
   image:
     repository: goharbor/harbor-portal
-    tag: v1.6.0
+    tag: dev
   replicas: 1
 # resources:
 #  requests:
