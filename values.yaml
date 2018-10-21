@@ -131,7 +131,7 @@ registry:
   registry:
     image:
       repository: goharbor/registry-photon
-      tag: v0.5.1-v1.6.0
+      tag: v2.6.2-v1.6.0
     logLevel: info
   controller:
     image:
